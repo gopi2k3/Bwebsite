@@ -171,7 +171,7 @@
    <!--jqurey cdn link -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
    <script src="owl-carousel\owl.carousel.min.js"></script>
-   <script src="main.js"></script> 
+   <!-- <script src="main.js"></script>  -->
  <!--end of the carousel section -->
 
 
@@ -320,16 +320,16 @@
 			</div>  
 			  <div class="Portfolio-header">
 			     <ul>
-				 <li class="portfolio-active">ALL</li>
-				 <li>APP</li>
-				 <li>CARD</li>
-				 <li>WEB</li>
+				 <li class="port-color" onclick="funportAll()">ALL</li>
+				 <li class="port-color" onclick="funportApp()">APP</li>
+				 <li class="port-color" onclick="funportCard()">CARD</li>
+				 <li class="port-color" onclick="funportWeb()">WEB</li>
 				 
 				 </ul>
 			  </div>
 	
 	    <div class="portfolio-row">
-		    <div class="portfolio-col">
+		    <!-- <div class="portfolio-col">
 			    
 				<div class="Portfolio-card">
 				    <div class="Portfolio-item">
@@ -475,7 +475,7 @@
 				    </div>
 			   </div>
 			</div>
-			
+			 -->
         </div>
 	</div>	
 </section>
@@ -719,7 +719,7 @@
 		
 	 <div class="contact-row2">
 	     <div class="contact-col1">
-			
+
 			   <div class="contact-items">
 			        <div class="contact-icon">
 				         <i class="bi bi-geo-alt"></i>
@@ -751,16 +751,23 @@
         </div>
 			
    		    
-			    <div class="contact-col2">
-				     <input type="name" placeholder="Your Name">
+			    <div class="contact-col2" id="contact">
+			
+                    <form style="text-align: center;" action="https://formspree.io/f/xeqylpzk"
+					method="POST">
+
+				     <input type="name" placeholder="Your Name" name="name">
 					 
-					<input type="mail" placeholder="Your mail"><br>
-					 <input type="text" placeholder="subject"><br>
+					<input type="mail" placeholder="Your mail" name="mail"><br>
+					 <input type="text" placeholder="subject" name="subject"><br>
 					 
 					<textarea rows="7"  placeholder="Messagae"></textarea>
-					<div class="contact-button">
+					<button class="contact-button" type="submit" style="outline: none;">
 				    <a href="#">Send Message</a>
-					</div>
+					</button>
+			
+					</form>
+                    
 				</div>
 			
 	</div>
@@ -853,5 +860,6 @@
 <script>
   AOS.init();
 </script>
+<script src="./main.js"></script>
 </body>
 </html>
